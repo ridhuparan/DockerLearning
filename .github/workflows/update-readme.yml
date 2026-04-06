@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   update-readme:
-    runs-on: agent
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repo
