@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "RIDHU",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus10.actions.githubusercontent.com/iWu1Xk8eZHf0D1WFDpbFvLZSvpLPrjEHtCLAFRk2IMObzZXO0b/",
+  "gitHubUrl": "https://github.com/ridhuparan/DockerLearning",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
