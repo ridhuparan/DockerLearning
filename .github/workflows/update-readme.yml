@@ -1,35 +1,29 @@
-name: Update README with Commit ID
-
-on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: write
-
 jobs:
   update-readme:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Get commit hash
-        shell: bash
-        run: echo "COMMIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+        shell: pwsh
+        run: echo "COMMIT_HASH=$(git rev-parse --short HEAD)" >> $env:GITHUB_ENV
 
       - name: Update README
-        shell: bash
+        shell: pwsh
         run: |
-          echo "Last commit: $COMMIT_HASH" > README.md
+          echo "Last commit: $env:COMMIT_HASH" > README.md
 
       - name: Commit changes
-        shell: bash
+        shell: pwsh
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add README.md
-          git diff --quiet || git commit -m "Update README with commit hash [skip ci]"
-          git push
+
+          if (-not (git diff --quiet)) {
+            git commit -m "Update README with commit hash [skip ci]"
+            git push
+          } else {
+            echo "No changes"
+          }
