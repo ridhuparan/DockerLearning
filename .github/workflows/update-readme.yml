@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   update-readme:
-    runs-on: agentgit
+    runs-on: agent
 
     steps:
       - name: Checkout repo
