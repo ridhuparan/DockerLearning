@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "ridhuparan/DockerLearning",
+  "pipelineDirectory": "DockerLearning",
+  "workspaceDirectory": "DockerLearning\\DockerLearning",
+  "repositories": {
+    "ridhuparan/DockerLearning": {
+      "repositoryPath": "DockerLearning\\DockerLearning",
+      "lastRunOn": "04/06/2026 15:55:30 +05:30"
+    }
+  },
+  "lastRunOn": "04/06/2026 16:00:01 +05:30"
+}
