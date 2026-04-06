@@ -1,3 +1,11 @@
+name: Update README with Commit Hash
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
   update-readme:
     runs-on: self-hosted
