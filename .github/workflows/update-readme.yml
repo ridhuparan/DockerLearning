@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   update-readme:
-    runs-on: self-hosted   # or ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repo
